@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +12,24 @@
       background: #f5f6fa;
       color: #333;
     }
+
     header {
       background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: #fff;
       padding: 60px 20px;
       text-align: center;
     }
+
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 15px;
     }
+
     header p {
       font-size: 1.2rem;
       margin-bottom: 25px;
     }
+
     header a {
       background: #ffb400;
       color: #000;
@@ -35,37 +40,45 @@
       font-size: 1.1rem;
       transition: 0.3s;
     }
+
     header a:hover {
       background: #ffc94d;
     }
+
     section {
       padding: 50px 20px;
       max-width: 1000px;
       margin: auto;
     }
+
     .beneficios {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
+
     .card {
       background: #fff;
       padding: 25px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
+
     .card h3 {
       margin-bottom: 10px;
       color: #2575fc;
     }
+
     .card p {
       font-size: 0.95rem;
     }
+
     .cta {
       text-align: center;
       margin-top: 40px;
     }
+
     .cta a {
       background: #2575fc;
       color: #fff;
@@ -75,23 +88,100 @@
       font-size: 1.2rem;
       transition: 0.3s;
     }
+
     .cta a:hover {
       background: #6a11cb;
     }
+
+    /* Seção de envio / contato */
+    .shipping {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .shipping h2 {
+      color: #6a11cb;
+      margin-bottom: 10px;
+    }
+
+    .shipping p,
+    .shipping li {
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .shipping ul {
+      padding-left: 20px;
+    }
+
+    /* Widget de contato (fixo) */
+    .contact-widget {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 9999;
+    }
+
+    .contact-widget a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+      background: #2575fc;
+      color: #fff;
+    }
+
+    .contact-widget a.email {
+      background: #6a11cb;
+    }
+
     footer {
       background: #222;
       color: #ccc;
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-      
     }
-     footer a {
+
+    footer a {
       color: #4F46E5;
       text-decoration: none;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .cta a {
+        padding: 14px 26px;
+        font-size: 1rem;
+      }
+
+      .contact-widget {
+        right: 12px;
+        bottom: 12px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -123,9 +213,27 @@
 
     <div class="cta" id="comprar">
       <h2>Garanta já o seu exemplar!</h2>
-      <p style="margin:20px 0; font-size:1.1rem;">Não perca tempo, descubra como transformar afiliados comuns em vendedores de alta performance.</p>
+      <p style="margin:20px 0; font-size:1.1rem;">Não perca tempo, descubra como transformar afiliados comuns em
+        vendedores de alta performance.</p>
       <a href="page_buy.html" target="_blank">Comprar Agora</a>
     </div>
+
+    <!-- Seção nova: Informações de Envio e Contato -->
+    <div class="shipping" id="informacoes-envio">
+      <h2>Informações de Envio & Contato</h2>
+      <p>Este é um produto digital. Após a confirmação do pagamento, o <strong>PDF será enviado automaticamente para o
+          seu e-mail</strong> informado no momento da compra.</p>
+
+      <p>Se não receber em até 15 minutos, verifique sua caixa de spam ou entre em contato pelos canais abaixo:</p>
+      <ul>
+        <li><strong>E-mail de suporte:</strong> <a href="mailto:moisessouza0204@gmail.com">moisessouza0204@gmail.com</a>
+        </li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/5571983406902?text=Olá!%20Não%20recebi%20meu%20PDF."
+            target="_blank">+55 (71) 983406902</a></li>
+      </ul>
+    </div>
+
+
   </section>
 
   <footer>
@@ -133,7 +241,19 @@
     <p>Suporte: <a href="mailto:moisessouza0204@gmail.com">moisessouza0204@gmail.com</a></p>
   </footer>
 
+  <!-- Widget de contato fixo (email + whatsapp) -->
+  <div class="contact-widget" aria-hidden="false">
+    <a class="email" href="mailto:moisessouza0204@gmail.com" title="Enviar e-mail">✉️</a>
+    <a class="whatsapp" id="whatsBtn"
+      href="https://wa.me/5571983406902?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20meu%20pedido." target="_blank"
+      title="WhatsApp">💬</a>
+  </div>
+
+  <script>
+    // Observação: substitua o número de exemplo (5511999999999) pelo seu número no formato internacional (ex: 5511999999999)
+    // Se preferir, posso já atualizar este número para você — envie o número no formato internacional e eu faço a alteração.
+  </script>
+
 </body>
+
 </html>
-
-
