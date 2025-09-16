@@ -118,6 +118,30 @@
       padding-left: 20px;
     }
 
+    /* Botão do WhatsApp */
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #20b857;
+    }
+
+    .whatsapp-btn img {
+      width: 22px;
+      height: 22px;
+    }
+
     /* Widget de contato (fixo) */
     .contact-widget {
       position: fixed;
@@ -139,7 +163,7 @@
       text-decoration: none;
       font-size: 20px;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-      background: #2575fc;
+      background: #25D366;
       color: #fff;
     }
 
@@ -226,33 +250,31 @@
 
       <p>Se não receber em até 15 minutos, verifique sua caixa de spam ou entre em contato pelos canais abaixo:</p>
       <ul>
-        <li><strong>E-mail de suporte:</strong> <a href="mailto:moisessouza0204@gmail.com">moisessouza0204@gmail.com</a>
-        </li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/5571983406902?text=Olá!%20Não%20recebi%20meu%20PDF."
-            target="_blank">+55 (71) 983406902</a></li>
+        
+          <a class="whatsapp-btn"
+            href="https://wa.me/5571983406902?text=Olá!%20Não%20recebi%20meu%20PDF." target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            Falar no WhatsApp
+          </a>
+        
       </ul>
     </div>
-
 
   </section>
 
   <footer>
     <p>&copy; 2025 - Moisés Oliveira | Todos os direitos reservados.</p>
-    <p>Suporte: <a href="mailto:moisessouza0204@gmail.com">moisessouza0204@gmail.com</a></p>
   </footer>
 
   <!-- Widget de contato fixo (email + whatsapp) -->
   <div class="contact-widget" aria-hidden="false">
-    <a class="email" href="mailto:moisessouza0204@gmail.com" title="Enviar e-mail">✉️</a>
     <a class="whatsapp" id="whatsBtn"
       href="https://wa.me/5571983406902?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20meu%20pedido." target="_blank"
-      title="WhatsApp">💬</a>
+      title="WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="26"
+        height="26">
+    </a>
   </div>
-
-  <script>
-    // Observação: substitua o número de exemplo (5511999999999) pelo seu número no formato internacional (ex: 5511999999999)
-    // Se preferir, posso já atualizar este número para você — envie o número no formato internacional e eu faço a alteração.
-  </script>
 
 </body>
 
